@@ -1,4 +1,4 @@
-// Scroll to show/hide header
+// Show/hide header on scroll
 
 const body = document.body;
 let lastScroll = 0;

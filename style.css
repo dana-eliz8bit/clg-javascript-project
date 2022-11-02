@@ -55,7 +55,7 @@ nav ul {
   font-size: 3rem;
 } */
 
-/* Scroll to show/hide header */
+/* Show/hide header on scroll */
 
 .scroll-down header {
   transform: translate3d(0, -100%, 0);
