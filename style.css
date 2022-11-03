@@ -16,6 +16,15 @@ body {
   font-family: "Montserrat", "Roboto", Arial, sans-serif;
 }
 
+/* a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
+} */
+
 ul,
 li {
   list-style-type: none;
@@ -45,7 +54,7 @@ header h1 {
   font-size: 2rem;
 }
 
-/* NAV */
+/* Nav */
 
 nav ul {
   display: flex;
@@ -61,7 +70,7 @@ nav a {
   height: 2em;
 }
 
-/* HEADER SHOW/HIDE ON SCROLL */
+/* Show/Hide on Scroll */
 
 .scroll-down header {
   transform: translate3d(0, -100%, 0);
@@ -71,12 +80,16 @@ nav a {
   filter: drop-shadow(0 -10px 20px #fcdc00);
 }
 
+/* Info Modal */
+
 /* FOOTER */
 
 footer {
   background-color: #fff;
   width: 100%;
   font-size: 0.85rem;
+  /* position: fixed;
+  bottom: 0; */
 }
 
 .wrapper-footer {
@@ -209,79 +222,16 @@ footer {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .odd section .icon {
   top: 15px;
   right: -60px;
 }
+
 .even section .icon {
   top: 15px;
   left: -60px;
 }
-
-/* PROJECT TEMPLATE */
-
-.header-project {
-  background-color: #fff;
-  width: 100%;
-}
-
-.footer-project {
-  background-color: #fff;
-  width: 100%;
-  font-size: 0.85rem;
-  /* position: fixed;
-  bottom: 0;
-  left: 0; */
-}
-
-.wrapper-project {
-  margin-top: 100px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
-
-.container-project {
-  background: #fff;
-  border-radius: 5px;
-  width: 100%;
-  padding: 20px;
-  /* position: relative; */
-  /* display: flex; */
-}
-
-.container-project section .details,
-.container-project section .link-project {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container-project section .details .title {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.container-project section p {
-  margin: 10px 0 17px 0;
-}
-
-.container-project section .link-project a {
-  text-decoration: none;
-  background: #fcdc00;
-  color: #000;
-  padding: 7px 15px;
-  border-radius: 5px;
-  font-weight: 400;
-  transition: all 0.3s ease;
-}
-
-.container-project section .link-project a:hover {
-  transform: scale(0.97);
-}
-
-/* Project IDs */
 
 /* MEDIA QUERIES */
 
@@ -301,13 +251,11 @@ footer {
   }
 
   /* FOOTER */
-
   .wrapper-footer {
     width: 90%;
   }
 
   /* MAIN */
-
   .wrapper-main {
     width: 85%;
     padding-right: 0px;
@@ -339,12 +287,6 @@ footer {
 
   .even section .icon {
     left: -60px;
-  }
-
-  /* PROJECTS */
-
-  .container-project section .link-project a {
-    display: none;
   }
 }
 
