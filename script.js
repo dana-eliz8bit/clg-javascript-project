@@ -1,6 +1,5 @@
-// HEADER
+// HEADER SHOW/HIDE ON SCROLL
 
-// Show/Hide on Scroll
 const body = document.body;
 let lastScroll = 0;
 
