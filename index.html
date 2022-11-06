@@ -27,7 +27,9 @@
               /></a>
             </li>
             <li>
-              <a href="#" target="_blank"
+              <a
+                href="https://github.com/dana-eliz8bit/clg-javascript-project"
+                target="_blank"
                 ><img
                   class="icon-header"
                   src="/images/code-alt-regular-24.png"
@@ -49,36 +51,45 @@
       </div>
       <div class="container odd">
         <section>
-          <img
-            class="icon"
-            src="/images/palette-regular-24.png"
-            alt="Palette"
-          />
-          <span class="title">Hoverboard</span>
-          <p>Mouseover the area inside the square.</p>
-          <div class="container-hoverboard" id="container-hoverboard"></div>
+          <img class="icon" src="/images/game-regular-24.png" alt="Game" />
+          <span class="title">Guess the Number</span>
+          <p>
+            Enter a number between <span class="min-num"></span> and
+            <span class="max-num"></span>.
+          </p>
+          <div id="game">
+            <input
+              type="number"
+              id="guess-input"
+              placehold="Enter your guess.."
+            />
+            <input type="submit" value="Submit" id="guess-btn" />
+            <p class="message"></p>
+          </div>
+          <hr>
           <div class="link-external-resource">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+              target="_blank"
+            >
+              Document.querySelector()</a
+            >
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
               target="_blank"
             >
-              addEventListener</a
+              EventTarget.addEventListener()</a
             >
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event"
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Window/location"
               target="_blank"
             >
-              mouseOver</a
-            >
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor"
-              target="_blank"
-              >Math.floor</a
+              Window.location</a
             >
             <a
-              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math"
               target="_blank"
-              >Math.random</a
+              >Math.</a
             >
           </div>
         </section>
@@ -87,11 +98,45 @@
         <section>
           <img
             class="icon"
-            src="/images/book-heart-regular-24.png"
-            alt="Book"
+            src="/images/palette-regular-24.png"
+            alt="Palette"
           />
-          <span class="title">Book List</span>
-          <p>Add a favourite title to the shelf.</p>
+          <span class="title">Hoverboard</span>
+          <p>Mouseover the area inside the square.</p>
+          <div class="container-hoverboard" id="container-hoverboard"></div>
+          <hr>
+          <div class="link-external-resource">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+              target="_blank"
+            >
+              Document.getElementById()</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+              target="_blank"
+            >
+              Document.createElement()</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList"
+              target="_blank"
+            >
+              Element.classList</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+              target="_blank"
+            >
+              Node.appendChild()</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent"
+              target="_blank"
+            >
+              MouseEvent</a
+            >
+          </div>
         </section>
       </div>
       <!-- <div class="container odd">

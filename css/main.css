@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", "Roboto", Arial, sans-serif;
 }
 
 html {
@@ -12,7 +13,6 @@ html {
 
 body {
   background: #ddd;
-  font-family: "Montserrat", "Roboto", Arial, sans-serif;
 }
 
 ul,
@@ -143,13 +143,14 @@ footer {
 }
 
 .container section p {
-  margin: 10px 0;
+  margin-top: 10px;
 }
 
 .link-external-resource {
   display: flex;
   flex-direction: column;
   max-width: min-content;
+  margin-top: 20px;
 }
 
 .link-external-resource a {
@@ -217,6 +218,35 @@ footer {
 
 /* PROJECT STYLING */
 
+/* Number Guesser */
+
+#game {
+  margin: 20px 0;
+}
+
+#guess-input {
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid #2da5ff;
+  width: 30%;
+  font-size: 16px;
+}
+
+#guess-btn {
+  background: #ec008c;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid #ec008c;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#guess-btn:hover {
+  transform: scale(0.97);
+}
+
 /* Hoverboard */
 
 .container-hoverboard {
@@ -225,7 +255,7 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 210px;
-  margin: 15px auto;
+  margin: 20px auto;
   padding: 2px;
   border: 1px solid #000;
   border-radius: 5px;
