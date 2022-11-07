@@ -150,3 +150,28 @@ function removeColor(element) {
 function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
+
+// PROJECT - NASA API
+
+const url = "https://api.nasa.gov/planetary/apod?api_key=";
+const api_key = "CNOb6SdeTtzvRxM5yySNjWSNgcGUatPkmMPZagnB";
+
+const fetchNASAData = async () => {
+  try {
+    const response = await fetch(`${url}${api_key}`);
+    const data = await response.json();
+    console.log("NASA APOD data", data);
+    displayData(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const displayData = (data) => {
+  document.getElementById("apod-title").textContent = data.title;
+  document.getElementById("apod-date").textContent = data.date;
+  document.getElementById("apod-picture").src = data.hdurl;
+  document.getElementById("apod-explanation").textContent = data.explanation;
+};
+
+fetchNASAData();

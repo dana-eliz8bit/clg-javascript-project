@@ -56,6 +56,7 @@ nav a {
   height: 2em;
 }
 
+
 /* Header Show/Hide on Scroll */
 
 .scroll-down header {
@@ -136,8 +137,14 @@ footer {
   left: -7px;
 }
 
-.title {
-  font-size: 22px;
+.container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ec008c;
+}
+
+.container h3 {
+  font-size: 1.25rem;
   font-weight: 700;
   color: #ec008c;
 }
@@ -146,18 +153,17 @@ footer {
   margin-top: 10px;
 }
 
-hr {
+.container hr {
   border-top: 1px solid #ccc;
   border-bottom: none;
   border-left: none;
   border-right: none;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .link-external-resource {
   display: flex;
   flex-direction: column;
-  max-width: min-content;
   margin-top: 20px;
 }
 
@@ -170,21 +176,8 @@ hr {
 .link-external-resource a:active {
   text-decoration: underline;
   background-color: #fcdc00;
+  max-width: fit-content;
 }
-
-/* .container section .link-project a {
-  text-decoration: none;
-  background: #ec008c;
-  color: #fff;
-  padding: 7px 15px;
-  border-radius: 5px;
-  font-weight: 400;
-  transition: all 0.3s ease;
-} */
-
-/* .container section .link-project a:hover {
-  transform: scale(0.97);
-} */
 
 .icon {
   padding: 5px;
@@ -263,9 +256,9 @@ hr {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 210px;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 2px;
-  border: 1px solid #000;
+  border: 1px solid #2da5ff;
   border-radius: 5px;
 }
 
@@ -285,6 +278,23 @@ hr {
 .square-lrg-scrn-only {
   display: none;
 }
+
+/* NASA API */
+
+.apod-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#apod-picture {
+  width: 100%;
+  border: 1px solid #2da5ff;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* MEDIA QUERIES */
 
 @media (max-width: 425px) {
   .wrapper-header {
