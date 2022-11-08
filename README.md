@@ -1,3 +1,3 @@
 # clg-javascript-project
 
-This project serves to house the mini javascript projects that I have built in the course of my learning journey.
+"project.js" is a learning tool intended to house mini html/css/js projects plus bookmarks for related reference material.

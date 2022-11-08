@@ -15,10 +15,24 @@ body {
   background: #ddd;
 }
 
-ul,
-li {
-  list-style-type: none;
+h1 {
+  font-size: 2.25em;
 }
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h2,
+h3 {
+  color: #ec008c;
+}
+
+/* HEADER */
 
 header {
   background-color: #fff;
@@ -38,8 +52,9 @@ header {
   align-items: center;
 }
 
-header h1 {
-  font-size: 2rem;
+nav ul,
+nav li {
+  list-style-type: none;
 }
 
 nav ul {
@@ -47,17 +62,16 @@ nav ul {
 }
 
 nav a {
-  padding-left: 1.5em;
+  margin-left: 0.75em;
   position: relative;
   bottom: -4px;
 }
 
-.icon-header {
+#icon-code {
   height: 2em;
 }
 
-
-/* Header Show/Hide on Scroll */
+/* Show/Hide Header */
 
 .scroll-down header {
   transform: translate3d(0, -100%, 0);
@@ -66,6 +80,8 @@ nav a {
 .scroll-up header {
   filter: drop-shadow(0 -10px 20px #fcdc00);
 }
+
+/* FOOTER */
 
 footer {
   background-color: #fff;
@@ -79,14 +95,18 @@ footer {
   padding: 20px 0px;
 }
 
+/* MAIN */
+
 .wrapper-main {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 90px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 75%;
   position: relative;
 }
+
+/* Vertical Line, Icons */
 
 .line-vertical {
   position: absolute;
@@ -98,85 +118,15 @@ footer {
   transform: translateX(-50%);
 }
 
-.container {
-  display: flex;
+.line-vertical .icon-line-vertical {
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.odd {
-  justify-content: flex-start;
-}
-
-.even {
-  justify-content: flex-end;
-}
-
-.container section {
-  background: #fff;
-  border-radius: 5px;
-  width: calc(50% - 40px);
-  padding: 20px;
-  position: relative;
-}
-
-.container section::before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  background: #4cb272;
-  top: 28px;
-  z-index: -1;
-  transform: rotate(45deg);
-}
-
-.odd section::before {
-  right: -7px;
-}
-
-.even section::before {
-  left: -7px;
-}
-
-.container h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ec008c;
-}
-
-.container h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #ec008c;
-}
-
-.container section p {
-  margin-top: 10px;
-}
-
-.container hr {
-  border-top: 1px solid #ccc;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  margin-top: 25px;
-}
-
-.link-external-resource {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.link-external-resource a {
-  text-decoration: none;
-  color: #000;
-}
-
-.link-external-resource a:hover,
-.link-external-resource a:active {
-  text-decoration: underline;
-  background-color: #fcdc00;
-  max-width: fit-content;
+.icon-line-vertical {
+  padding: 2px;
+  background: #fcdc00;
 }
 
 .icon {
@@ -184,13 +134,8 @@ footer {
   background: #b0e2fd;
 }
 
-.icon-scroll {
-  padding: 2px;
-  background: #fcdc00;
-}
-
-.container section .icon,
-.line-vertical .icon-scroll {
+.icon,
+.line-vertical .icon-line-vertical {
   position: absolute;
   height: 40px;
   width: 40px;
@@ -201,28 +146,113 @@ footer {
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
-.line-vertical .icon-scroll {
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+/* SECTIONS */
+
+.section {
+  display: flex;
 }
 
-.odd section .icon {
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.container {
+  background: #fff;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 18px 20px 20px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 3px 0 0px rgba(0, 0, 0, 0.05);
+}
+
+.container::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #4cb272;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.left::before {
+  right: -7px;
+}
+
+.left .icon {
   top: 15px;
   right: -60px;
 }
 
-.even section .icon {
+.right::before {
+  left: -7px;
+}
+
+.right .icon {
   top: 15px;
   left: -60px;
 }
 
-/* PROJECT STYLING */
+.container p {
+  margin-top: 10px;
+}
 
-/* Number Guesser */
+/* Links */
+
+.btn-links {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin-top: 10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-links:hover {
+  transform: scale(0.95);
+}
+
+#icon-links {
+  height: 1.5em;
+  width: 1.5em;
+  transform: rotate(45deg);
+  margin-bottom: -8px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 14px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000;
+  background-color: #fcdc00;
+  max-width: fit-content;
+}
+
+.links a:hover,
+.links a:active {
+  text-decoration: underline;
+}
+
+/* PROJECTS */
+
+/* Number Guess */
 
 #game {
-  margin: 20px 0;
+  margin-top: 10px;
 }
 
 #guess-input {
@@ -248,7 +278,8 @@ footer {
   transform: scale(0.97);
 }
 
-/* Hoverboard */
+
+/* Hover Board */
 
 .container-hoverboard {
   display: flex;
@@ -256,7 +287,11 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 210px;
-  margin: 20px auto;
+  /* margin: 20px auto; */
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2px;
   border: 1px solid #2da5ff;
   border-radius: 5px;
@@ -279,7 +314,7 @@ footer {
   display: none;
 }
 
-/* NASA API */
+/* NASA APOD */
 
 .apod-container {
   display: flex;
@@ -294,6 +329,8 @@ footer {
   padding: 10px;
 }
 
+/* Book List */
+
 /* MEDIA QUERIES */
 
 @media (max-width: 425px) {
@@ -301,12 +338,13 @@ footer {
     width: 90%;
   }
 
-  #november {
-    display: none;
+  h1 {
+    font-size: 2em;
   }
 
-  nav a {
-    padding-left: 0.75em;
+  nav a,
+  nav button {
+    margin-left: 0.5em;
   }
 
   .wrapper-footer {
@@ -315,35 +353,25 @@ footer {
 
   .wrapper-main {
     width: 90%;
+    margin-bottom: 0px;
   }
 
-  .icon,
-  .icon-scroll,
-  .line-vertical {
+  .line-vertical,
+  .icon-line-vertical,
+  .icon {
     display: none;
   }
 
   .container {
-    margin-bottom: 25px;
-  }
-
-  .container section {
     width: 100%;
   }
 
-  .odd section::before {
+  .left::before {
     left: -7px;
   }
 
-  .odd section .icon {
-    left: -60px;
-  }
-
-  .even section::before {
-    left: -7px;
-  }
-
-  .even section .icon {
+  .left .icon {
+    top: 15px;
     left: -60px;
   }
 }
@@ -353,10 +381,6 @@ footer {
     width: 90%;
   }
 
-  nav a {
-    padding-left: 0.5em;
-  }
-
   .wrapper-footer {
     width: 90%;
   }
@@ -366,8 +390,8 @@ footer {
   }
 }
 
-@media (min-width: 1024px) {
-  .container section {
-    padding: 30px;
+@media (min-width: 1440px) {
+  .container {
+    padding: 26px 28px 28px 28px;
   }
 }

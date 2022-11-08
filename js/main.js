@@ -1,4 +1,6 @@
-// Header Show/Hide on Scroll
+// HEADER
+
+// Show/Hide on Scroll
 const body = document.body;
 
 let lastScroll = 0;
@@ -20,7 +22,9 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 
-// PROJECT - NUMBER GUESSER
+// PROJECTS
+
+// Number Guess
 
 // Game Values
 let min = 1,
@@ -52,9 +56,9 @@ guessBtn.addEventListener("click", function () {
   // console.log(guessInput.value);
   let guess = parseInt(guessInput.value);
   console.log(guess);
-  // Validate
+  // Validate <-- THIS IS BROKEN, FIGURE OUT FIX!!!
   if (isNaN(guess) || guess < min || guess > max) {
-    setMessage(`Please enter a number between ${min} and ${max}`, "red");
+    setMessage(`Please enter a number between ${min} and ${max}`, "#f1592c");
   }
   // Check Guess Result
   if (guess === winningNum) {
@@ -87,7 +91,7 @@ guessBtn.addEventListener("click", function () {
       guessInput.style.borderColor = "#2da5ff";
       // Clear Input
       guessInput.value = "";
-      setMessage(`WRONG! ${guessesLeft} out of 3 guesses left!`);
+      setMessage(`WRONG! ${guessesLeft} out of 3 guesses left!`, "#f1592c");
     }
   }
 });
@@ -121,7 +125,7 @@ function setMessage(msg, color) {
   message.textContent = msg;
 }
 
-// PROJECT - HOVERBOARD
+// Hover Board
 
 const container = document.getElementById("container-hoverboard");
 const colors = ["#2da5ff", "#10e595", "#fcdc00", "#ec008c", "#000"];
@@ -151,7 +155,7 @@ function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
-// PROJECT - NASA API
+// NASA APOD
 
 const url = "https://api.nasa.gov/planetary/apod?api_key=";
 const api_key = "CNOb6SdeTtzvRxM5yySNjWSNgcGUatPkmMPZagnB";
@@ -175,3 +179,5 @@ const displayData = (data) => {
 };
 
 fetchNASAData();
+
+// Book List

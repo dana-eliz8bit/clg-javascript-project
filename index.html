@@ -19,19 +19,11 @@
         <nav>
           <ul>
             <li>
-              <a href="#"
-                ><img
-                  class="icon-header"
-                  src="/images/info-circle-regular-24.png"
-                  alt="About"
-              /></a>
-            </li>
-            <li>
               <a
                 href="https://github.com/dana-eliz8bit/clg-javascript-project"
                 target="_blank"
                 ><img
-                  class="icon-header"
+                  id="icon-code"
                   src="/images/code-alt-regular-24.png"
                   alt="Code"
               /></a>
@@ -44,30 +36,33 @@
       <div class="line-vertical">
         <a href="#"
           ><img
-            class="icon-scroll"
+            class="icon-line-vertical"
             src="/images/up-arrow-circle-regular-24.png"
             alt="Up Arrow"
         /></a>
       </div>
-      <div class="container odd">
-        <section>
+      <!-- Project - Number Guesser -->
+      <section class="section left">
+        <div class="container left">
           <img class="icon" src="/images/game-regular-24.png" alt="Game" />
-          <h2>Number Guesser</h2>
+          <h2>Guess the Number</h2>
           <p>
-            Enter a number between <span class="min-num"></span> and
+            Pick a number between <span class="min-num"></span> and
             <span class="max-num"></span>.
           </p>
           <div id="game">
-            <input
-              type="number"
-              id="guess-input"
-              placehold="Enter your guess.."
-            />
+            <input type="number" id="guess-input" placeholder="#" />
             <input type="submit" value="Submit" id="guess-btn" />
             <p class="message"></p>
           </div>
-          <hr />
-          <div class="link-external-resource">
+          <button class="btn-links">
+            <img
+              id="icon-links"
+              src="/images/link-regular-24.png"
+              alt="Links"
+            />
+          </button>
+          <div class="links">
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
               target="_blank"
@@ -92,20 +87,27 @@
               >Math.</a
             >
           </div>
-        </section>
-      </div>
-      <div class="container even">
-        <section>
+        </div>
+      </section>
+      <!-- Project - Hover Board -->
+      <section class="section right">
+        <div class="container right">
           <img
             class="icon"
             src="/images/palette-regular-24.png"
             alt="Palette"
           />
-          <h2>Hoverboard</h2>
-          <p>Mouseover the area inside the square.</p>
+          <h2>Hover Board</h2>
+          <p>Mouseover the square.</p>
           <div class="container-hoverboard" id="container-hoverboard"></div>
-          <hr />
-          <div class="link-external-resource">
+          <button class="btn-links">
+            <img
+              id="icon-links"
+              src="/images/link-regular-24.png"
+              alt="Links"
+            />
+          </button>
+          <div class="links">
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
               target="_blank"
@@ -137,14 +139,15 @@
               MouseEvent</a
             >
           </div>
-        </section>
-      </div>
-      <div class="container odd">
-        <section>
+        </div>
+      </section>
+      <!-- Project - NASA APOD -->
+      <section class="section left">
+        <div class="container left">
           <img class="icon" src="/images/star-regular-24.png" alt="Star" />
           <h2>NASA</h2>
           <h3>Astronomy Picture of the Day</h3>
-          <p>Take a moment to stare into space..</p>
+          <p>Stare into space.</p>
           <div class="apod-container">
             <img
               src=""
@@ -155,8 +158,14 @@
             <p id="apod-date"></p>
             <!-- <p id="apod-explanation"></p> -->
           </div>
-          <hr />
-          <div class="link-external-resource">
+          <button class="btn-links">
+            <img
+              id="icon-links"
+              src="/images/link-regular-24.png"
+              alt="Links"
+            />
+          </button>
+          <div class="links">
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
               target="_blank"
@@ -178,28 +187,52 @@
               >JSON</a
             >
           </div>
-        </section>
-      </div>
-      <!-- <div class="container odd">
-        <section>
-          <img class="icon" src="/images/window-regular-24.png" alt="Window" />
-          <span class="title">Project Name</span>
-          <p>Text here.</p>
-          <div class="link-external-resource">            
-            <a href="#" target="_blank">Text</a>
+        </div>
+      </section>
+      <!-- Project - Template Right-->
+      <!-- <section class="section right">
+        <div class="container right">
+          <img
+            class="icon"
+            src="/images/window-regular-24.png"
+            alt="Window"
+          />
+          <h2>Project Name</h2>
+          <p>Text.</p>
+          <button class="btn-links">
+            <img
+              id="icon-links"
+              src="/images/link-regular-24.png"
+              alt="Links"
+            />
+          </button>
+          <div class="links">
+            <a href="#" target="_blank">Link</a>
           </div>
-        </section>
-      </div> -->
-      <!-- <div class="container even">
-        <section>
-          <img class="icon" src="/images/window-regular-24.png" alt="Window" />
-          <span class="title">Project Name</span>
-          <p>Text here.</p>
-          <div class="link-external-resource">            
-            <a href="#" target="_blank">Text</a>
+        </div>
+      </section> -->
+      <!-- Project - Template Left-->
+      <!-- <section class="section left">
+        <div class="container left">
+          <img
+            class="icon"
+            src="/images/window-regular-24.png"
+            alt="Window"
+          />
+          <h2>Project Name</h2>
+          <p>Text.</p>
+          <button class="btn-links">
+            <img
+              id="icon-links"
+              src="/images/link-regular-24.png"
+              alt="Links"
+            />
+          </button>
+          <div class="links">
+            <a href="#" target="_blank">Link</a>
           </div>
-        </section>
-      </div> -->
+        </div>
+      </section> -->
     </main>
     <footer>
       <div class="wrapper-footer">
