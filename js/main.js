@@ -24,7 +24,7 @@ window.addEventListener("scroll", () => {
 
 // PROJECTS
 
-// Number Guess
+// GUESS THE NUMBER
 
 // Game Values
 let min = 1,
@@ -40,58 +40,48 @@ const game = document.querySelector("#game"),
   guessInput = document.querySelector("#guess-input"),
   message = document.querySelector(".message");
 
-// Assign UI Min & Max
+// Assign UI Min and Max
 minNum.textContent = min;
 maxNum.textContent = max;
 
-// Play Again Event Listener
+// Event Listener - Play Again
 game.addEventListener("mousedown", function (e) {
   if (e.target.className === "play-again") {
     window.location.reload();
   }
 });
 
-// Listen for Guess
+// Event Listener - Guess
 guessBtn.addEventListener("click", function () {
-  // console.log(guessInput.value);
   let guess = parseInt(guessInput.value);
-  console.log(guess);
-  // Validate <-- THIS IS BROKEN, FIGURE OUT FIX!!!
-  if (isNaN(guess) || guess < min || guess > max) {
-    setMessage(`Please enter a number between ${min} and ${max}`, "#f1592c");
-  }
-  // Check Guess Result
+  // Validate <-- THIS ISN'T WORKING, FIX!!
+  // if (isNaN(guess) || guess < min || guess > max) {
+  //   setMessage(`Enter a number between ${min} and ${max}!`, "#f1592c");
+  // }
+  // Check for Win Condition
   if (guess === winningNum) {
-    // Game Over, Won
-    // // Disable Input
-    // guessInput.disabled = true;
-    // // Change Border Color
-    // guessInput.style.borderColor = "green";
-    // // Set Win Message
-    // setMessage(`${winningNum} is correct, YOU WIN!`, "green");
-    gameOver(true, `${winningNum} is correct, YOU WIN!`);
+    // Game Over - Win
+    gameOver(true, `WINNER! ${winningNum} is correct!`);
   } else {
     // Wrong Number
     guessesLeft -= 1;
     if (guessesLeft === 0) {
-      // Game Over, Lost
-      // // Disable Input
-      // guessInput.disabled = true;
-      // // Change Border Color
-      // guessInput.style.borderColor = "red";
-      // // Set Win Message
-      // setMessage(
-      //   `Game Over, you lost. The correct answer was ${winningNum}.`,
-      //   "red"
-      // );
-      gameOver(false, `GAME OVER! The winner was ${winningNum}.`);
+      // Game Over - Loss
+      gameOver(
+        false,
+        `GAME OVER! It was ${winningNum}!`
+      );
     } else {
-      // Game Continues
+      // Game Continues - Wrong Number
       // Change Border Color
-      guessInput.style.borderColor = "#2da5ff";
+      guessInput.style.borderColor = "#f1592c";
       // Clear Input
       guessInput.value = "";
-      setMessage(`WRONG! ${guessesLeft} out of 3 guesses left!`, "#f1592c");
+      // Message
+      setMessage(
+        `OOPS! ${guessesLeft} of 3 guesses left!`,
+        "#f1592c"
+      );
     }
   }
 });
@@ -104,18 +94,17 @@ function gameOver(won, msg) {
   guessInput.disabled = true;
   // Change Border Color
   guessInput.style.borderColor = color;
-  // Change Text Color
+  // Set Text Color
   message.style.color = color;
-  // Set Win Message
+  // Set Message
   setMessage(msg);
-  // Play Again
-  guessBtn.value = "Play Again";
+  // Play Again?
+  guessBtn.value = "Again!";
   guessBtn.className += "play-again";
 }
 
 // Get Winning Number
 function getRandomNum(min, max) {
-  // console.log(Math.floor(Math.random() * (max - min + 1) + min));
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -125,7 +114,7 @@ function setMessage(msg, color) {
   message.textContent = msg;
 }
 
-// Hover Board
+// HOVER BOARD
 
 const container = document.getElementById("container-hoverboard");
 const colors = ["#2da5ff", "#10e595", "#fcdc00", "#ec008c", "#000"];
@@ -179,5 +168,3 @@ const displayData = (data) => {
 };
 
 fetchNASAData();
-
-// Book List

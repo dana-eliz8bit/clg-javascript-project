@@ -212,7 +212,7 @@ footer {
   padding: 0;
   margin-top: 10px;
   font: inherit;
-  cursor: pointer;
+  /* cursor: pointer; */
   outline: inherit;
   transition: all 0.3s ease;
 }
@@ -226,7 +226,6 @@ footer {
   width: 1.5em;
   transform: rotate(45deg);
   margin-bottom: -8px;
-  cursor: pointer;
 }
 
 .links {
@@ -238,23 +237,24 @@ footer {
 .links a {
   text-decoration: none;
   color: #000;
-  background-color: #fcdc00;
+  background-color: #fcda005e;
   max-width: fit-content;
 }
 
 .links a:hover,
 .links a:active {
   text-decoration: underline;
+  background-color: #fcdc00;
+  max-width: fit-content;
 }
 
 /* PROJECTS */
 
-/* Number Guess */
+/* GUESS THE NUMBER */
 
 #game {
   margin-top: 10px;
 }
-
 #guess-input {
   padding: 7px 15px;
   border-radius: 5px;
@@ -262,7 +262,6 @@ footer {
   width: 30%;
   font-size: 16px;
 }
-
 #guess-btn {
   background: #ec008c;
   color: #fff;
@@ -273,13 +272,11 @@ footer {
   font-size: 16px;
   transition: all 0.3s ease;
 }
-
 #guess-btn:hover {
   transform: scale(0.97);
 }
 
-
-/* Hover Board */
+/* HOVER BOARD */
 
 .container-hoverboard {
   display: flex;
@@ -287,7 +284,6 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 210px;
-  /* margin: 20px auto; */
   margin-top: 20px;
   margin-bottom: 0px;
   margin-left: auto;
@@ -328,8 +324,6 @@ footer {
   margin-top: 20px;
   padding: 10px;
 }
-
-/* Book List */
 
 /* MEDIA QUERIES */
 
