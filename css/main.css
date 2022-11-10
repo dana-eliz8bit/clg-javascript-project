@@ -255,6 +255,7 @@ footer {
 #game {
   margin-top: 10px;
 }
+
 #guess-input {
   padding: 7px 15px;
   border-radius: 5px;
@@ -262,6 +263,7 @@ footer {
   width: 30%;
   font-size: 16px;
 }
+
 #guess-btn {
   background: #ec008c;
   color: #fff;
@@ -269,9 +271,10 @@ footer {
   border-radius: 5px;
   border: 1px solid #ec008c;
   outline: none;
-  font-size: 16px;
+  font-size: large;
   transition: all 0.3s ease;
 }
+
 #guess-btn:hover {
   transform: scale(0.97);
 }
@@ -323,6 +326,106 @@ footer {
   border-radius: 5px;
   margin-top: 20px;
   padding: 10px;
+}
+
+/* BOOK LIST */
+
+.container-book-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#title,
+#author,
+#isbn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.book-input {
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid #2da5ff;
+  width: 30%;
+  font-size: 16px;
+}
+
+#book-btn {
+  background: #ec008c;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: 1px solid #ec008c;
+  outline: none;
+  font-size: large;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#book-btn:hover {
+  transform: scale(0.97);
+}
+
+hr {
+  border-top: 1px solid #4cb272;
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+.success,
+.error {
+  color: white;
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: large;
+  width: fit-content;
+}
+.success {
+  background: #4cb272;
+}
+.error {
+  background: #f1592c;
+}
+
+/* .container-table {
+  overflow-x: auto;
+} */
+
+table {
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: small;
+}
+
+thead th:nth-child(1) {
+  width: 55%;
+}
+
+th {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 5px 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.delete {
+  text-decoration: none;
+  color: #f1592c;
 }
 
 /* MEDIA QUERIES */
